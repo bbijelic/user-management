@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.github.bbijelic.users.config.ServiceConfiguration;
+import com.github.bbijelic.users.resources.UserResource;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -29,7 +30,7 @@ public class UserManagementApplication extends Application<ServiceConfiguration>
      * Constructor
      */
     public UserManagementApplication() {
-        // TODO Auto-generated constructor stub
+        
     }
     
     @Override
@@ -44,8 +45,11 @@ public class UserManagementApplication extends Application<ServiceConfiguration>
     }
     
     @Override
-    public void run(ServiceConfiguration arg0, Environment arg1) throws Exception {
+    public void run(ServiceConfiguration config, Environment env) throws Exception {
         LOGGER.info("Running {}", getName());
+        
+        // Register resource
+        env.jersey().register(new UserResource());
         
     }
     

@@ -1,0 +1,34 @@
+# Server configuration
+server:
+  applicationConnectors:
+  - type: http
+    port: 8080
+  adminConnectors:
+  - type: http
+    port: 8081
+  requestLog:
+    appenders:
+      - type: file
+        threshold: TRACE
+        currentLogFilename: /projects/user-management/assembly/target/user-management-1.0.0-SNAPSHOT/user-management-1.0.0-SNAPSHOT/logs/requests.log
+        archivedLogFilenamePattern: /projects/user-management/assembly/target/user-management-1.0.0-SNAPSHOT/user-management-1.0.0-SNAPSHOT/logs/requests-%d.log
+        archive: true
+        archivedFileCount: 5
+        timeZone: CET
+
+# Logging configuration
+logging:
+  level: TRACE
+  loggers:
+    org.hibernate: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: DEBUG
+  appenders:
+    - type: file
+      threshold: TRACE
+      currentLogFilename: /projects/user-management/assembly/target/user-management-1.0.0-SNAPSHOT/user-management-1.0.0-SNAPSHOT/logs/service.log
+      archivedLogFilenamePattern: /projects/user-management/assembly/target/user-management-1.0.0-SNAPSHOT/user-management-1.0.0-SNAPSHOT/service-%d.log
+      archive: true
+      archivedFileCount: 5
+      timeZone: CET
+      logFormat: "%d{HH:mm:ss.SSS} [%thread] %-5level [%X{txid}] %logger{35} - %msg%n"

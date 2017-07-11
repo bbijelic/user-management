@@ -1,2 +1,4 @@
+com/github/bbijelic/users/resources/UserResource.class
 com/github/bbijelic/users/config/ServiceConfiguration.class
 com/github/bbijelic/users/UserManagementApplication.class
+com/github/bbijelic/users/representations/User.class

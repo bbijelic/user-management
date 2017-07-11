@@ -1,0 +1,4 @@
+/projects/user-management/service/src/main/java/com/github/bbijelic/users/config/ServiceConfiguration.java
+/projects/user-management/service/src/main/java/com/github/bbijelic/users/UserManagementApplication.java
+/projects/user-management/service/src/main/java/com/github/bbijelic/users/resources/UserResource.java
+/projects/user-management/service/src/main/java/com/github/bbijelic/users/representations/User.java
